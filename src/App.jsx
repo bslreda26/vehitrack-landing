@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 // Make sure framer-motion is properly imported
 import { motion, AnimatePresence } from "framer-motion";
 
+// Import images directly for better Vite compatibility
+import img1 from '../images/1.png';
+import img2 from '../images/2.png';
+import img3 from '../images/3.png';
+import img4 from '../images/4.png';
+import img5 from '../images/5.png';
+import img6 from '../images/6.png';
+import img7 from '../images/7.png';
+import img8 from '../images/8.png';
+
 export default function App() {
   // Animation variants
   const fadeIn = {
@@ -108,14 +118,14 @@ export default function App() {
   
   // All images in numerical order
   const orderedImages = [
-    '/images/1.png',
-    '/images/2.png',
-    '/images/3.png',
-    '/images/4.png',
-    '/images/5.png',
-    '/images/6.png',
-    '/images/7.png',
-    '/images/8.png'
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8
   ];
   
   // Dashboard carousel images - using all images in order
@@ -123,27 +133,27 @@ export default function App() {
   
   // Feature section images - using subsets of the ordered images
   const vehiclesImages = [
-    '/images/1.png',
-    '/images/2.png',
-    '/images/3.png'
+    img1,
+    img2,
+    img3
   ];
   
   const alertsImages = [
-    '/images/4.png',
-    '/images/5.png',
-    '/images/6.png'
+    img4,
+    img5,
+    img6
   ];
   
   const expensesImages = [
-    '/images/6.png',
-    '/images/7.png',
-    '/images/8.png'
+    img6,
+    img7,
+    img8
   ];
   
   const analyticsImages = [
-    '/images/2.png',
-    '/images/4.png',
-    '/images/8.png'
+    img2,
+    img4,
+    img8
   ];
   
   // Image rotation effect
@@ -614,7 +624,7 @@ export default function App() {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-          <p>© Vehitrack 2025 — Tous droits réservés</p>
+          <p> Vehitrack 2025 — Tous droits réservés</p>
         </div>
       </footer>
     </div>
