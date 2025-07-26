@@ -1,0 +1,346 @@
+/* Clean & Comprehensive Maintenance Form Styles */
+
+/* Container & Layout */
+.maintenance-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.modern-form-header {
+  margin-bottom: 2rem;
+}
+
+.modern-form-header .bg-gradient-to-r {
+  background: #2563eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Form Structure */
+.modern-maintenance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section Cards */
+.form-section-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-section-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
+.section-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.section-header h3 {
+  color: #1e293b;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-header h3 i {
+  color: #2563eb;
+}
+
+.section-divider {
+  height: 2px;
+  background: #2563eb;
+  width: 60px;
+  margin-top: 0.5rem;
+  border-radius: 1px;
+}
+
+/* Field Styling */
+.modern-field {
+  margin-bottom: 1.25rem;
+}
+
+.modern-label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.modern-label i {
+  color: #2563eb;
+  margin-right: 0.5rem;
+  width: 14px;
+  text-align: center;
+}
+
+.modern-input-wrapper {
+  position: relative;
+}
+
+/* Input Elements */
+.modern-input,
+.modern-dropdown,
+.modern-calendar,
+.modern-textarea {
+  width: 100% !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  padding: 0.75rem !important;
+  font-size: 0.9rem !important;
+  transition: all 0.15s ease !important;
+  background: white !important;
+}
+
+.modern-input:focus,
+.modern-dropdown:focus,
+.modern-calendar:focus,
+.modern-textarea:focus {
+  outline: none !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+.modern-input:hover,
+.modern-dropdown:hover,
+.modern-calendar:hover,
+.modern-textarea:hover {
+  border-color: #9ca3af !important;
+}
+
+/* Placeholder Styling */
+.modern-input::placeholder,
+.modern-textarea::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .md\:col-6 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .col-12,
+  .col-6,
+  .md\:col-6 {
+    grid-column: span 1;
+  }
+}
+
+/* Error States */
+.modern-error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.p-invalid {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+/* Field Hints */
+.field-hint {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* File Upload */
+.modern-file-upload {
+  border: 2px dashed #d1d5db !important;
+  border-radius: 6px !important;
+  padding: 1rem !important;
+  text-align: center;
+  transition: all 0.15s ease !important;
+}
+
+.modern-file-upload:hover {
+  border-color: #2563eb !important;
+  background: #f8fafc !important;
+}
+
+/* Image Preview */
+.image-preview {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+
+/* Action Buttons */
+.action-buttons-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+.p-button-lg {
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  transition: all 0.15s ease !important;
+}
+
+.p-button:not(.p-button-outlined) {
+  background: #2563eb !important;
+  border: 1px solid #2563eb !important;
+}
+
+.p-button:not(.p-button-outlined):hover {
+  background: #1d4ed8 !important;
+  border: 1px solid #1d4ed8 !important;
+}
+
+.p-button-outlined {
+  background: white !important;
+  border: 1px solid #d1d5db !important;
+  color: #374151 !important;
+}
+
+.p-button-outlined:hover {
+  background: #f9fafb !important;
+  border: 1px solid #9ca3af !important;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .maintenance-form-container {
+    padding: 1rem;
+  }
+
+  .form-section-card {
+    padding: 1rem;
+  }
+
+  .modern-form-header h2 {
+    font-size: 1.25rem !important;
+  }
+
+  .action-buttons-card .flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .action-buttons-card .flex > div {
+    width: 100%;
+  }
+
+  .action-buttons-card .flex button {
+    width: 100%;
+  }
+}
+
+/* Loading State */
+.modern-maintenance-form.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Focus Management */
+.modern-input:focus-visible,
+.modern-dropdown:focus-visible,
+.modern-calendar:focus-visible,
+.modern-textarea:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Accessibility */
+.modern-error i,
+.field-hint i {
+  font-size: 0.75rem;
+}
+
+/* Form Flow Indicators */
+.section-number {
+  background: #2563eb;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Clean Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-section-card {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Optional Fields Styling */
+.optional-badge {
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}

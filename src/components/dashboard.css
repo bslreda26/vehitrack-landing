@@ -1,0 +1,202 @@
+/* Dashboard Styles */
+.dashboard-container {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 60px);
+}
+
+.dashboard-header {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2b2d42;
+  margin: 0 0 0.25rem 0;
+}
+
+.dashboard-subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Filter Section Styles */
+.filter-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* Custom styling for PrimeReact SelectButton */
+:global(.status-filter-buttons .p-selectbutton) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+:global(.status-filter-buttons .p-selectbutton .p-button) {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #4b5563;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+:global(.status-filter-buttons .p-selectbutton .p-button:not(.p-disabled):not(.p-highlight):hover) {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+:global(.status-filter-buttons .p-selectbutton .p-button.p-highlight) {
+  background-color: #4361ee;
+  border-color: #4361ee;
+  color: white;
+}
+
+/* Search Section Styles */
+.search-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper {
+  flex: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: 8px;
+}
+
+.advanced-search-button {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #4b5563;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.advanced-search-button:hover {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* Advanced Search Dialog Styles */
+.advanced-search-content {
+  padding: 1rem 0;
+}
+
+.search-field-group {
+  margin-bottom: 1.5rem;
+}
+
+.field-label {
+  display: block;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.field-with-clear {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clear-button {
+  background-color: #f3f4f6;
+  border: none;
+  color: #6b7280;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+}
+
+.clear-button:hover {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.dialog-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.apply-filters-button {
+  background-color: #4361ee;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+}
+
+.apply-filters-button:hover {
+  background-color: #3a56d4;
+}
+
+/* Table Container Styles */
+.table-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Days Dialog Styles */
+.days-dialog .p-dialog-content {
+  padding: 1.5rem;
+}
+
+.apply-days-button {
+  background-color: #4361ee;
+  border: none;
+  border-radius: 8px;
+}
+
+.apply-days-button:hover {
+  background-color: #3a56d4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+  
+  .filter-section, 
+  .search-section {
+    padding: 0.75rem 1rem;
+  }
+  
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+  
+  .search-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .advanced-search-button {
+    align-self: flex-end;
+  }
+}

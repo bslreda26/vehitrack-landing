@@ -1,0 +1,205 @@
+.step-progress {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.step-progress.vertical {
+  flex-direction: column;
+  height: 100%;
+  min-height: 250px;
+  gap: 1rem;
+}
+
+.step-progress.horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+}
+
+.vertical .step-item {
+  width: 100%;
+}
+
+.horizontal .step-item {
+  flex: 1;
+}
+
+.step-indicator {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #666;
+}
+
+.step-item.completed .step-indicator {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+.step-item.current .step-indicator {
+  background-color: #fff;
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.step-item.has-error .step-indicator {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.step-label {
+  color: #666;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.indicator-right .step-label {
+  text-align: right;
+}
+
+.step-item.completed .step-label {
+  color: #4caf50;
+}
+
+.step-item.current .step-label {
+  color: #2196f3;
+  font-weight: 600;
+}
+
+.step-item.has-error .step-label {
+  color: #f44336;
+}
+
+/* Sub-steps styling */
+.sub-steps {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.indicator-right .sub-steps {
+  margin-left: 0;
+  margin-right: 3rem;
+}
+
+.sub-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.indicator-right .sub-step {
+  flex-direction: row-reverse;
+}
+
+.sub-step-indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.sub-step.completed .sub-step-indicator {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+.sub-step.error .sub-step-indicator {
+  background-color: #fff;
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.sub-step-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.sub-step.completed .sub-step-label {
+  color: #4caf50;
+}
+
+.sub-step.error .sub-step-label {
+  color: #f44336;
+}
+
+.step-connector {
+  position: absolute;
+  background-color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.vertical .step-connector {
+  width: 2px;
+  height: calc(100% + 1rem);
+  top: 2rem;
+}
+
+.indicator-left .step-connector {
+  left: 1rem;
+  transform: translateX(-50%);
+}
+
+.indicator-right .step-connector {
+  right: 1rem;
+  transform: translateX(50%);
+}
+
+.horizontal .step-connector {
+  height: 2px;
+  width: calc(100% - 3rem);
+  top: 1rem;
+  left: 50%;
+}
+
+.step-item.completed .step-connector {
+  background-color: #4caf50;
+}
+
+.check-mark {
+  font-size: 1rem;
+}
+
+.error-mark {
+  font-size: 1rem;
+  color: #f44336;
+}
+
+.sub-step-dot {
+  font-size: 1.2rem;
+  line-height: 1;
+}
